@@ -1,0 +1,34 @@
+public class Address{
+    //Ryan Rahmati
+    private String Street;
+    private int Zip;
+    
+    public Address()
+    {
+        Street = "rock";
+        Zip = 68;
+    }
+    public Address(String a, int z)
+    {
+        Street = a;
+        Zip = z;
+    }
+    public void setAddress(String a, int z)
+    {
+        Street = a;
+        Zip = z;
+    }
+    public int getZip()
+    {
+        return Zip;
+    }
+     public String getStreet()
+    {
+        return Street;
+    }
+
+    public String toString()
+    {
+        return "The address is " + Street + " The zip is " + Zip;
+    }
+}
