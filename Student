@@ -1,0 +1,53 @@
+//Steven Navarro
+public class Student
+{
+ private String name;
+ private int id;
+ private Address ad;
+ private Course cse;
+ 
+ public Student(){
+     name = "Bob";
+     id = 11111;
+     ad = new Address();
+     cse = new Course();
+ }
+ public Student(String s, int i, Address a, Course c){
+     name = s;
+     id = i;
+     ad = a;
+     cse = c;
+ }
+ 
+ public void setName(String n){
+     name = n;
+ }
+ public void setId(int i){
+     id = i;
+ }
+ public void setAddress(String s, int z){
+     ad.setAddress(s,z);
+ }
+ public String getName(){
+     return name;
+ }
+ public int getId(){
+     return id;
+ }
+ public Address getAddress(){
+     return ad;
+ }
+ public Course getCourse(){
+     return cse;
+ }
+ public boolean enroll(Course c){
+     boolean s = c.enrollStudent();
+     if(s == true){
+         c.dropStudent();
+         cse = c;
+         return true;
+     }else{
+         return false;
+     }
+ }
+}
