@@ -1,0 +1,50 @@
+/**
+ * Write a description of class Course here.
+ *
+ * @Dean Minuskin
+ * @11/13/2024
+ */
+public class Course
+{
+    private String name;
+    private int numStudents;
+    public Course() {
+        name = "AP Comp Sci A";
+        numStudents = 3;
+    }
+    public Course (String n, int num) {
+        name = n;
+        if(!((num>50)||(num<3))) {
+            numStudents = num;
+        }
+        else {
+            numStudents = 3;
+        }
+    }
+    public void setName(String n) {
+        name = n;
+    }
+    public String getName() {
+        return name;
+    }
+    public int getNumStudents() {
+        return numStudents;
+    }
+    public boolean enrollStudent() {
+        if(numStudents<50) {
+            numStudents++;
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    public void dropStudent() {
+        if (numStudents>0) {
+            numStudents--;
+        }
+    }
+    public String toString() {
+        return "the course name is "+name+" and the number of students in the course is "+numStudents;
+    }
+}
